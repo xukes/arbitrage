@@ -1,0 +1,48 @@
+{
+    "mode": "paper",
+    "trading_pairs": {
+        "binance": [
+            "AAPL:AAPLUSDT",
+            "NVDA:NVDAUSDT",
+            "TSLA:TSLAUSDT"
+        ],
+        "okx": []
+    },
+    "binance": {
+        "enabled": true,
+        "live_api_key": "YOUR_BINANCE_API_KEY",
+        "live_secret": "YOUR_BINANCE_SECRET",
+        "testnet_api_key": "",
+        "testnet_secret": ""
+    },
+    "okx": {
+        "enabled": false,
+        "live_api_key": "YOUR_OKX_API_KEY",
+        "live_secret": "YOUR_OKX_SECRET",
+        "live_passphrase": "YOUR_OKX_PASSPHRASE",
+        "testnet_api_key": "",
+        "testnet_secret": "",
+        "testnet_passphrase": ""
+    },
+    "leverage": 10,
+    "base_margin": 10,
+    "take_profit_pct": 5.0,
+    "poll_interval": 10,
+    "pair_overrides": {
+        "AAPL:AAPLUSDT": {
+            "base_margin": 10,
+            "normal_thresholds": [
+                0.5,
+                1.0,
+                2.0,
+                3.0
+            ],
+            "margin_multipliers": [
+                1.0,
+                2.0,
+                3.0,
+                3.0
+            ]
+        }
+    }
+}

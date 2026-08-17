@@ -1,0 +1,100 @@
+# ---- Byte-compiled / optimized ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ---- Distribution / packaging ----
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ---- PyInstaller ----
+*.manifest
+# 注意：本项目的 .spec 文件是手工维护的，需要纳入版本控制，故不忽略
+Output/
+
+# ---- Installer (Inno Setup) ----
+Output/
+*.exe
+*.dmg
+*.pkg
+
+# ---- Unit test / coverage ----
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# ---- Environments ----
+.env
+.env.*
+!.env.example
+.venv
+.venv-*/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ---- Type checkers / linters ----
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# ---- Jupyter / IPython ----
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# ---- IDE / editors ----
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ---- OS ----
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ---- 项目本地配置与运行时数据（含 API 密钥，切勿上传）----
+settings.json
+auto_trader_config.json
+*.local.json
+logs/
+*.log
+*.db
+*.sqlite3

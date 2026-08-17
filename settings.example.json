@@ -1,0 +1,30 @@
+{
+    "qq_enabled": true,
+    "qq_http_url": "http://127.0.0.1:5700",
+    "qq_user_id": 0,
+    "desktop_notify": true,
+    "sound_alert": true,
+    "email_enabled": true,
+    "email_user": "your@email.com",
+    "email_pass": "YOUR_EMAIL_AUTH_CODE",
+    "email_to": "friend@email.com",
+    "poll_interval": 30,
+    "alert_cooldown": 300,
+    "start_minimized": false,
+    "proxy": {
+        "enabled": true,
+        "http": "http://127.0.0.1:7890",
+        "https": "http://127.0.0.1:7890"
+    },
+    "quiet_hours": {
+        "enabled": true,
+        "days": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "start": "16:00",
+        "end": "08:00"
+    }
+}
