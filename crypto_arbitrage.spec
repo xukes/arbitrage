@@ -1,16 +1,11 @@
 # -*- mode: python ; coding: utf-8 -*-
 """
-PyInstaller spec for CryptoArbitrage
+PyInstaller spec for CryptoArbitrage (Windows .exe)
 Build: pyinstaller crypto_arbitrage.spec
 """
 
-import sys
-import os
-
 # Project root (SPECPATH is where the .spec file lives)
 ROOT = SPECPATH
-
-block_cipher = None
 
 a = Analysis(
     ['main.py'],
@@ -55,13 +50,10 @@ a = Analysis(
         'scipy',
         'PIL',
     ],
-    win_no_prefer_redirects=False,
-    win_private_assemblies=False,
-    cipher=block_cipher,
     noarchive=False,
 )
 
-pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
+pyz = PYZ(a.pure)
 
 exe = EXE(
     pyz,
@@ -72,7 +64,7 @@ exe = EXE(
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
-    upx=True,
+    upx=False,              # UPX 会破坏 PyQt5 / ccxt 的部分 DLL
     console=False,          # no console window for GUI app
     disable_windowed_traceback=False,
     argv_emulation=False,
@@ -85,10 +77,9 @@ exe = EXE(
 coll = COLLECT(
     exe,
     a.binaries,
-    a.zipfiles,
     a.datas,
     strip=False,
-    upx=True,
+    upx=False,
     upx_exclude=[],
     name='CryptoArbitrage',
 )
